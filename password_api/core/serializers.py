@@ -7,37 +7,37 @@ from .models import *
 User = get_user_model()
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'username', 'email', 'groups')
 
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ('url', 'name')
 
 
-class CategorySerializer(serializers.HyperlinkedModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ('name',)
 
 
-class CompanySerializer(serializers.HyperlinkedModelSerializer):
+class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
         fields = ('name', 'subscribe')
 
 
-class PasswordCardSerializer(serializers.HyperlinkedModelSerializer):
+class PasswordCardSerializer(serializers.ModelSerializer):
     class Meta:
         model = PasswordCard
         fields = ('name', 'login', 'password')
 
 
-class UserRegistrationSerializer(serializers.HyperlinkedModelSerializer):
+class UserRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserRegistration
         fields = ('user', 'company', 'category', 'password_cards')
