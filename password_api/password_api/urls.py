@@ -8,6 +8,8 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'companies', views.CompanyViewSet)
+router.register(r'categories', views.CategoryViewSet)
+router.register(r'password_cards', views.PasswordCardViewSet)
 
 urlpatterns = [
     path('admin', admin.site.urls),

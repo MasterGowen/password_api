@@ -21,3 +21,18 @@ class GroupViewSet(viewsets.ModelViewSet):
 class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class PasswordCardViewSet(viewsets.ModelViewSet):
+    queryset = PasswordCard.objects.all()
+    serializer_class = PasswordCardSerializer
+
+
+class UserRegistrationViewSet(viewsets.ModelViewSet):
+    queryset = UserRegistration.objects.all()
+    serializer_class = UserRegistrationSerializer
