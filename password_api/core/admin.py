@@ -23,5 +23,5 @@ class PasswordCardAdmin(admin.ModelAdmin):
 
 @admin.register(UserRegistration)
 class UserRegistrationAdmin(admin.ModelAdmin):
-    list_display = ('user', 'company', 'category', 'password_cards')
+    list_display = ('user', 'company', 'category')
     search_fields = ('user', 'company', 'category', 'password_cards')
