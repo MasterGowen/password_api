@@ -27,7 +27,7 @@ class PasswordCard(models.Model):
 
     def __str__(self):
         if self.name:
-            return self.name
+            return f"{self.name} ('{self.login}/{self.password}')"
         else:
             return self.login
 
