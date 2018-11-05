@@ -10,7 +10,7 @@ User = get_user_model()
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('id', 'url', 'username', 'email', 'groups')
 
 
 class GroupSerializer(serializers.ModelSerializer):
@@ -28,17 +28,17 @@ class CategorySerializer(serializers.ModelSerializer):
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = ('name', 'subscribe')
+        fields = ('id', 'name', 'subscribe')
 
 
 class PasswordCardSerializer(serializers.ModelSerializer):
     class Meta:
         model = PasswordCard
-        fields = ('name', 'login', 'password')
+        fields = ('id', 'name', 'login', 'password')
 
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserRegistration
-        fields = ('user', 'company', 'category', 'password_cards')
+        fields = ('id', 'user', 'company', 'category', 'password_cards')
         depth = 2
