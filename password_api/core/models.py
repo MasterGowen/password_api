@@ -5,10 +5,16 @@ from django.contrib.auth import get_user_model
 class Category(models.Model):
     name = models.CharField("Наименование", blank=False, null=False, max_length=1024)
 
+    def __str__(self):
+        return self.name
+
 
 class Company(models.Model):
     subscribe = models.CharField("Подписка", blank=True, null=True, max_length=512)
     name = models.CharField("Наименование", blank=False, null=False, max_length=1024)
+
+    def __str__(self):
+        return self.name
 
 
 class PasswordCard(models.Model):
@@ -31,3 +37,6 @@ class UserRegistration(models.Model):
     company = models.ForeignKey("Company", blank=False, on_delete=models.DO_NOTHING)
     category = models.ForeignKey("Category", blank=False, on_delete=models.DO_NOTHING)
     password_cards = models.ManyToManyField("PasswordCard")
+
+    def __str__(self):
+        return f"{self.user} {self.company} {self.category}"
