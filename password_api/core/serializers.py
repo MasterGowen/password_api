@@ -41,4 +41,4 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserRegistration
         fields = ('id', 'user', 'company', 'category', 'password_cards')
-        depth = 2
+        depth = 1
