@@ -24,7 +24,7 @@ SECRET_KEY = '_v7(^izq9r1v8+=*@a8b$$xv*n(em&gjydv$cb9z772ew86ef9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gowen.ru:8080']
 
 # Application definition
 
